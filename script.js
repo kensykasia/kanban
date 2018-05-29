@@ -18,36 +18,37 @@ $(function() {
 
 
 
-    function createColumn() {
-        var $column = $('<div>').addClass('column');
-        var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
-        var $columnCardList = $('<ul>').addClass('column-card-list');
-        var $columnDelete = $('<button>').addClass('btn-delete').text('x');
-        var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
+        function createColumn() {
+            var $column = $('<div>').addClass('column');
+            var $columnTitle = $('<h2>').addClass('column-title').text(self.name);
+            var $columnCardList = $('<ul>').addClass('column-card-list');
+            var $columnDelete = $('<button>').addClass('btn-delete').text('x');
+            var $columnAddCard = $('<button>').addClass('add-card').text('Add a card');
 
-        $columnDelete.click(function() {
-            self.removeColumn();
-        });
-        $columnAddCard.click(function(event) {
-            self.addCard(new Card(prompt("Enter the name of the card")));
-        });
+            $columnDelete.click(function() {
+                self.removeColumn();
+            });
+            $columnAddCard.click(function(event) {
+                self.addCard(new Card(prompt("Enter the name of the card")));
+            });
 
-        $column.append($columnTitle)
-            .append($columnDelete)
-            .append($columnAddCard)
-            .append($columnCardList);
+            $column.append($columnTitle)
+                .append($columnDelete)
+                .append($columnAddCard)
+                .append($columnCardList);
 
-        return $column;
+            return $column;
+        }
     }
-  }
-  Column.prototype = {
-      addCard: function(card) {
-          this.$element.children('ul').append(card.$element);
-      },
-      removeColumn: function() {
-          this.$element.remove();
-      }
-  };
+    Column.prototype = {
+        addCard: function(card) {
+            this.$element.children('ul').append(card.$element);
+        },
+        removeColumn: function() {
+            this.$element.remove();
+        }
+    };
+
     function Card(description) {
         var self = this;
 
@@ -69,13 +70,13 @@ $(function() {
             return $card;
 
         }
-      }
+    }
 
-        Card.prototype = {
-            removeCard: function() {
-                this.$element.remove();
-            }
+    Card.prototype = {
+        removeCard: function() {
+            this.$element.remove();
         }
+    }
 
 
     var board = {
@@ -112,7 +113,7 @@ $(function() {
 
     // CREATING CARDS
     var card1 = new Card('New task');
-    var card2 = new Card('Create kanban boards');
+    var card2 = new Card('Do something');
 
     // ADDING CARDS TO COLUMNS
     todoColumn.addCard(card1);

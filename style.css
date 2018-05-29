@@ -12,10 +12,12 @@ body {
   margin: 0 auto;
   width: 1200px;
 }
+
 .board {
   margin: 0 auto;
   height: auto;
 }
+
 .column {
   width: 400px;
   float: left;
@@ -25,10 +27,12 @@ body {
   margin: 2px;
   position: relative;
 }
+
 h1 {
   text-align: center;
   margin-bottom: 30px;
 }
+
 .create-column {
   display: block;
   margin: 0 auto;
@@ -38,9 +42,11 @@ h1 {
   font-weight: bold;
   cursor: pointer;
 }
+
 .create-column:hover {
   color: lightgrey;
 }
+
 .card {
   list-style-type: none;
   font-weight: bold;
@@ -49,27 +55,33 @@ h1 {
   margin-bottom: 15px;
   cursor: pointer;
 }
+
 .card-description {
   font-size: 32px;
 }
+
 .add-card {
   font-family: 'Amatic SC', cursive;
   font-size: 24px;
   font-weight: bold;
 }
+
 .add-card:hover {
   cursor: pointer;
   color: lightgrey;
 }
+
 .btn-delete {
   font-family: 'Amatic SC', cursive;
   font-size: 24px;
   cursor: pointer;
   font-weight: bold;
 }
+
 .btn-delete:hover {
   color: red;
 }
+
 .card .btn-delete {
   position: absolute;
   top: 2px;
@@ -81,14 +93,15 @@ h1 {
   position: absolute;
   top: 2px;
   left: 2px;
-
 }
+
 .card-placeholder {
   border: 2px dashed grey;
   height: 100px;
   width: 100%;
   list-style-type: none;
 }
+
 .column-card-list {
   min-height: 100px;
   width: 90%;
@@ -96,7 +109,7 @@ h1 {
   margin: 30px auto;
 }
 
-.btn-delete, .add-card, .card, .create-column, .column{
+.btn-delete, .add-card, .card, .create-column, .column {
   background-color: white;
   border: 2px dashed black;
 }
